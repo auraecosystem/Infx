@@ -13516,3 +13516,11 @@
   description:
     - "Add Kimi-K3.1-Pro GB200 vLLM AgentX configs on vllm/vllm-openai:kimi-k31-arm64-cu135-7074371 with optimized parallel configurations."
   pr-link: https://github.com/SemiAnalysisAI/InferenceX/pull/5199
+
+- config-keys:
+    - kimik3.1-fp4-gb200-vllm-agentic-dspark-tp16-disagg
+    - kimik3.1-fp4-gb200-vllm-agentic-dspark-tp8pp2-agg
+  scenario-type: [agentic-coding]
+  description:
+    - "Update the vLLM image from kimi-k31-arm64-cu130 to kimi-k31-mc-f4c9618-arm64."
+  pr-link: https://github.com/SemiAnalysisAI/InferenceX/pull/5177
