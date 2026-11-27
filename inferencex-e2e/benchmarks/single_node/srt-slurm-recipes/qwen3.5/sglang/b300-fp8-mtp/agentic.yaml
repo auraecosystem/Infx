@@ -65,7 +65,7 @@ override_tp4_c1:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 2
-        cuda-graph-max-bs: 1
+        cuda-graph-max-bs-decode: 1
   benchmark:
     env:
       CONC: '1'
@@ -79,7 +79,7 @@ override_tp4_c4:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 8
-        cuda-graph-max-bs: 4
+        cuda-graph-max-bs-decode: 4
   benchmark:
     env:
       CONC: '4'
@@ -93,7 +93,7 @@ override_tp4_c8:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 16
-        cuda-graph-max-bs: 8
+        cuda-graph-max-bs-decode: 8
   benchmark:
     env:
       CONC: '8'
@@ -107,7 +107,7 @@ override_tp4_c12:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 24
-        cuda-graph-max-bs: 12
+        cuda-graph-max-bs-decode: 12
   benchmark:
     env:
       CONC: '12'
@@ -121,7 +121,7 @@ override_tp4_c16:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 32
-        cuda-graph-max-bs: 16
+        cuda-graph-max-bs-decode: 16
   benchmark:
     env:
       CONC: '16'
@@ -135,7 +135,7 @@ override_tp4_c20:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 40
-        cuda-graph-max-bs: 20
+        cuda-graph-max-bs-decode: 20
   benchmark:
     env:
       CONC: '20'
@@ -149,7 +149,7 @@ override_tp4_c24:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 48
-        cuda-graph-max-bs: 24
+        cuda-graph-max-bs-decode: 24
   benchmark:
     env:
       CONC: '24'
@@ -163,7 +163,7 @@ override_tp4_c28:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 56
-        cuda-graph-max-bs: 28
+        cuda-graph-max-bs-decode: 28
   benchmark:
     env:
       CONC: '28'
@@ -177,7 +177,7 @@ override_tp4_c32:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 64
-        cuda-graph-max-bs: 32
+        cuda-graph-max-bs-decode: 32
   benchmark:
     env:
       CONC: '32'
@@ -191,7 +191,7 @@ override_tp4_c40:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 80
-        cuda-graph-max-bs: 40
+        cuda-graph-max-bs-decode: 40
   benchmark:
     env:
       CONC: '40'
@@ -205,7 +205,7 @@ override_tp4_c48:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 96
-        cuda-graph-max-bs: 48
+        cuda-graph-max-bs-decode: 48
   benchmark:
     env:
       CONC: '48'
@@ -219,7 +219,7 @@ override_tp4_c56:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 112
-        cuda-graph-max-bs: 56
+        cuda-graph-max-bs-decode: 56
   benchmark:
     env:
       CONC: '56'
@@ -233,7 +233,7 @@ override_tp4_c60:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 120
-        cuda-graph-max-bs: 60
+        cuda-graph-max-bs-decode: 60
   benchmark:
     env:
       CONC: '60'
@@ -247,7 +247,7 @@ override_tp4_c64:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 128
-        cuda-graph-max-bs: 64
+        cuda-graph-max-bs-decode: 64
   benchmark:
     env:
       CONC: '64'
@@ -261,7 +261,7 @@ override_tp4_c68:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 136
-        cuda-graph-max-bs: 64
+        cuda-graph-max-bs-decode: 64
   benchmark:
     env:
       CONC: '68'
@@ -275,7 +275,7 @@ override_tp4_c72:
         expert-parallel-size: 1
         tokenizer-worker-num: 6
         max-running-requests: 144
-        cuda-graph-max-bs: 64
+        cuda-graph-max-bs-decode: 64
   benchmark:
     env:
       CONC: '72'
@@ -288,7 +288,7 @@ override_tp2_c1:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 2
-        cuda-graph-max-bs: 1
+        cuda-graph-max-bs-decode: 1
   benchmark:
     env:
       CONC: '1'
@@ -301,7 +301,7 @@ override_tp2_c4:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 8
-        cuda-graph-max-bs: 4
+        cuda-graph-max-bs-decode: 4
   benchmark:
     env:
       CONC: '4'
@@ -314,7 +314,7 @@ override_tp2_c8:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 16
-        cuda-graph-max-bs: 8
+        cuda-graph-max-bs-decode: 8
   benchmark:
     env:
       CONC: '8'
@@ -327,7 +327,7 @@ override_tp2_c12:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 24
-        cuda-graph-max-bs: 12
+        cuda-graph-max-bs-decode: 12
   benchmark:
     env:
       CONC: '12'
@@ -340,7 +340,7 @@ override_tp2_c16:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 32
-        cuda-graph-max-bs: 16
+        cuda-graph-max-bs-decode: 16
   benchmark:
     env:
       CONC: '16'
@@ -353,7 +353,7 @@ override_tp2_c20:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 40
-        cuda-graph-max-bs: 20
+        cuda-graph-max-bs-decode: 20
   benchmark:
     env:
       CONC: '20'
@@ -366,7 +366,7 @@ override_tp2_c24:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 48
-        cuda-graph-max-bs: 24
+        cuda-graph-max-bs-decode: 24
   benchmark:
     env:
       CONC: '24'
@@ -379,7 +379,7 @@ override_tp2_c28:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 56
-        cuda-graph-max-bs: 28
+        cuda-graph-max-bs-decode: 28
   benchmark:
     env:
       CONC: '28'
@@ -392,7 +392,7 @@ override_tp2_c32:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 64
-        cuda-graph-max-bs: 32
+        cuda-graph-max-bs-decode: 32
   benchmark:
     env:
       CONC: '32'
@@ -405,7 +405,7 @@ override_tp2_c32_hicache:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 64
-        cuda-graph-max-bs: 32
+        cuda-graph-max-bs-decode: 32
         page-size: 64
         enable-hierarchical-cache: true
         hicache-size: 144
@@ -424,7 +424,7 @@ override_tp2_c34_hicache:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 68
-        cuda-graph-max-bs: 34
+        cuda-graph-max-bs-decode: 34
         page-size: 64
         enable-hierarchical-cache: true
         hicache-size: 144
@@ -443,7 +443,7 @@ override_tp2_c36_hicache:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 72
-        cuda-graph-max-bs: 36
+        cuda-graph-max-bs-decode: 36
         page-size: 64
         enable-hierarchical-cache: true
         hicache-size: 144
@@ -462,7 +462,7 @@ override_tp2_c38_hicache:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 76
-        cuda-graph-max-bs: 38
+        cuda-graph-max-bs-decode: 38
         page-size: 64
         enable-hierarchical-cache: true
         hicache-size: 144
@@ -481,7 +481,7 @@ override_tp2_c40_hicache:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 80
-        cuda-graph-max-bs: 40
+        cuda-graph-max-bs-decode: 40
         page-size: 64
         enable-hierarchical-cache: true
         hicache-size: 144
@@ -500,7 +500,7 @@ override_tp2_c44_hicache:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 88
-        cuda-graph-max-bs: 44
+        cuda-graph-max-bs-decode: 44
         page-size: 64
         enable-hierarchical-cache: true
         hicache-size: 144
@@ -519,7 +519,7 @@ override_tp2_c48_hicache:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 96
-        cuda-graph-max-bs: 48
+        cuda-graph-max-bs-decode: 48
         page-size: 64
         enable-hierarchical-cache: true
         hicache-size: 144
@@ -538,7 +538,7 @@ override_tp2_c52_hicache:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 104
-        cuda-graph-max-bs: 52
+        cuda-graph-max-bs-decode: 52
         page-size: 64
         enable-hierarchical-cache: true
         hicache-size: 144
@@ -557,7 +557,7 @@ override_tp2_c56_hicache:
         tensor-parallel-size: 2
         expert-parallel-size: 2
         max-running-requests: 112
-        cuda-graph-max-bs: 56
+        cuda-graph-max-bs-decode: 56
         page-size: 64
         enable-hierarchical-cache: true
         hicache-size: 144
