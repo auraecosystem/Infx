@@ -19,9 +19,9 @@ PR first; the sweep is the candidate source, not the failed publication target.
 Use `run-sweep.yml` as the target workflow only for merges predating `merge-ingest.yml`.
 
 ```bash
-gh run view "$RUN_ID" -R SemiAnalysisAI/InferenceX \
+gh run view "$RUN_ID" -R auraecosystem/infx \
   --json event,headBranch,headSha,status,conclusion,attempt,jobs
-gh api --paginate "repos/SemiAnalysisAI/InferenceX/actions/runs/$RUN_ID/artifacts?per_page=100" \
+gh api --paginate "repos/auraecosystem/infx/actions/runs/$RUN_ID/artifacts?per_page=100" \
   --jq '.artifacts[] | [.id,.name,.created_at,.expires_at,.expired,.size_in_bytes] | @tsv'
 ```
 
@@ -100,12 +100,12 @@ a sign-off. Later commits can change the recipe, so choose the newest run whose
 execution inputs match the final PR head.
 
 ```bash
-SOURCE_JSON=$(gh api "repos/SemiAnalysisAI/InferenceX/actions/runs/$SOURCE_RUN_ID")
+SOURCE_JSON=$(gh api "repos/auraecosystem/infx/actions/runs/$SOURCE_RUN_ID")
 SOURCE_HEAD_SHA=$(jq -r .head_sha <<<"$SOURCE_JSON")
 SOURCE_RUN_ATTEMPT=$(jq -r .run_attempt <<<"$SOURCE_JSON")
 jq -e '.event == "pull_request" and .status == "completed" and
   .path == ".github/workflows/run-sweep.yml"' <<<"$SOURCE_JSON"
-gh api --paginate "repos/SemiAnalysisAI/InferenceX/pulls/$ORIGINAL_PR/commits" \
+gh api --paginate "repos/auraecosystem/trt/pulls/$ORIGINAL_PR/commits" \
   --jq '.[].sha' | grep -Fx "$SOURCE_HEAD_SHA"
 git fetch origin main
 git fetch origin "+pull/$ORIGINAL_PR/head:refs/remotes/origin/source-pr-$ORIGINAL_PR"
